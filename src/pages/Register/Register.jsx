@@ -1,15 +1,12 @@
 import { DevTool } from "@hookform/devtools";
+import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
   const { createUser } = useAuth();
-  const form = useForm({
-    defaultValues: {
-      name: "",
-    },
-  });
+  const form = useForm();
 
   const {
     register,
@@ -23,7 +20,17 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result);
+        // update user
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photoUrl,
+        })
+          .then(() => {
+            console.log("profile is updated");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       })
       .catch((error) => console.error(error));
   };
@@ -125,7 +132,8 @@ const Register = () => {
                   validate: {
                     passwordLength: (value) => {
                       return (
-                        value.length >= 6 || "Password must be at least 6 character!"
+                        value.length >= 6 ||
+                        "Password must be at least 6 character!"
                       );
                     },
                     passwordUpCase: (value) => {
