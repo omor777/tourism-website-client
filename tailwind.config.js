@@ -5,7 +5,7 @@ export default {
     screens: {
       sm: "576px",
       md: "768px",
-      lg: "992px",
+      lg: "1024px",
       xl: "1220px",
     },
     extend: {
@@ -29,10 +29,11 @@ export default {
         raleway: ["'Raleway', sans-serif"],
         rancho: ["'Rancho', cursive"],
       },
-      backgroundImage:{
-        formBg:
-        "url('https://i.ibb.co/R2ytr9K/signup.png')",
-      }
+      backgroundImage: {
+        formBg: "url('https://i.ibb.co/R2ytr9K/signup.png')",
+        loginBg:
+          "url('https://i.ibb.co/G0SfWvr/undraw-Access-account-re-8spm.png')",
+      },
     },
   },
   plugins: [require("daisyui")],

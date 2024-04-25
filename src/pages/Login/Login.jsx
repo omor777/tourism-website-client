@@ -1,12 +1,12 @@
 import { DevTool } from "@hookform/devtools";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-  const { loginUser, googleLogin } = useAuth();
+  const { loginUser, googleLogin, githubLogin } = useAuth();
   const form = useForm();
 
   const {
@@ -16,24 +16,42 @@ const Login = () => {
     formState: { errors },
   } = form;
 
+  const navigator = useNavigate();
+
   const handleLogin = (data) => {
     const { email, password } = data;
 
     loginUser(email, password)
       .then((result) => {
         Swal.fire({
-          title: "Good job!",
-          text: "You clicked the button!",
+          title: "Login successful 😀",
           icon: "success",
         });
+
+        navigator("/");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          title: "Opps!",
+          text: "Invalid credential!",
+          icon: "error",
+        });
+      });
   };
 
   const handleGoogleLogin = (params) => {
     googleLogin()
       .then((result) => {
-        console.log("google login done");
+        navigator("/");
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin()
+      .then(() => {
+        navigator("/");
       })
       .catch((error) => console.error(error));
   };
@@ -41,7 +59,7 @@ const Login = () => {
   return (
     <div className="container mt-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 border border-primary-extraLight  overflow-hidden">
-        <div className="p-10">
+        <div className="p-10 order-2 lg:order-1">
           <form onSubmit={handleSubmit(handleLogin)}>
             <h1 className="text-4xl font-rancho text-center font-bold mb-8">
               Login Now
@@ -91,7 +109,7 @@ const Login = () => {
               <button onClick={handleGoogleLogin}>
                 <FaGoogle className="text-4xl" />
               </button>
-              <button>
+              <button onClick={handleGithubLogin}>
                 <FaGithub className="text-4xl" />
               </button>
             </div>
@@ -107,7 +125,7 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <div className="bg-formBg bg-center bg-cover bg-no-repeat border-l border-primary-light"></div>
+        <div className="bg-loginBg bg-center bg-cover bg-no-repeat border-b lg:border-b-0 lg:border-l border-primary-light min-h-[630px] order-1 lg:order-2"></div>
       </div>
       <DevTool control={control} />
     </div>

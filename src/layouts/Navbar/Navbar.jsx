@@ -1,13 +1,14 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, logoutUser } = useAuth();
 
+  const navigator = useNavigate();
   const handleLogout = () => {
     logoutUser()
       .then(() => {
-        console.log("logout successful");
+        navigator("/login");
       })
       .catch((error) => console.error(error));
   };
