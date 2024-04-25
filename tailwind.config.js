@@ -10,7 +10,19 @@ export default {
     },
     extend: {
       colors: {
-        Primary: "#378CE7",
+        primary: {
+          main: "#3b82f6",
+          dark: "#1d4ed8",
+          light: "#93c5fd",
+        },
+        secondary: {
+          main: "#a855f7",
+          dark: "#7e22ce",
+          light: "#d8b4fe",
+        },
+      },
+      container: {
+        center: true,
       },
       fontFamily: {
         raleway: ["'Raleway', sans-serif"],

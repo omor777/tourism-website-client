@@ -1,8 +1,17 @@
+import { Outlet } from "react-router-dom";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const Root = () => {
   return (
-    <div>Root</div>
-  )
-}
+    <main>
+      <div >
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    </main>
+  );
+};
 
-export default Root
+export default Root;
