@@ -14,6 +14,7 @@ export default {
           main: "#3b82f6",
           dark: "#1d4ed8",
           light: "#93c5fd",
+          extraLight: "#bfdbfe",
         },
         secondary: {
           main: "#a855f7",
@@ -28,6 +29,10 @@ export default {
         raleway: ["'Raleway', sans-serif"],
         rancho: ["'Rancho', cursive"],
       },
+      backgroundImage:{
+        formBg:
+        "url('https://i.ibb.co/R2ytr9K/signup.png')",
+      }
     },
   },
   plugins: [require("daisyui")],
