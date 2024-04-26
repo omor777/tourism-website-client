@@ -54,7 +54,7 @@ const Navbar = () => {
                   }
                   to="/addTouristSpot"
                 >
-                  AddTouristSpot
+                  Add Tourist Spot
                 </NavLink>
               </li>
               <li>

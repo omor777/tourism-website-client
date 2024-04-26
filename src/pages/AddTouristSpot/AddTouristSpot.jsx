@@ -1,22 +1,21 @@
 import { DevTool } from "@hookform/devtools";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import API_URL from "../../utils/api";
-import Swal from "sweetalert2";
-import { useRef } from "react";
 
 const AddTouristSpot = () => {
-  const formRef = useRef(null)
+  const formRef = useRef(null);
   const { user } = useAuth();
 
-  const form = useForm();
+  const form = useForm({
+    defaultValues: {
+      username: user?.displayName,
+      email: user?.email,
+    },
+  });
 
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = form;
+  const { register, handleSubmit, control } = form;
 
   const handleAddTouristSpot = (data) => {
     const {
@@ -59,28 +58,28 @@ const AddTouristSpot = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-         if(data.insertedId) {
-          Swal.fire({
-            title: "Good job!",
-            text: "Your tourist spot has been added",
-            icon: "success"
-          });
-
-          // resent form
-          formRef.current.reset()
-         }
+        if (data.insertedId) {
+          // Swal.fire({
+          //   title: "Good job!",
+          //   text: "Your tourist spot has been added",
+          //   icon: "success"
+          // });
+          // // resent form
+          // formRef.current.reset()
+        }
       });
   };
 
   return (
     <div className="container">
-      <form ref={formRef}
+      <form
+        ref={formRef}
         onSubmit={handleSubmit(handleAddTouristSpot)}
         className="border border-blue-200 p-8 lg:py-12 lg:px-16 rounded space-y-6"
       >
-           <h1 className="text-5xl font-rancho text-center font-bold mb-12">
-              Add Tourist Spot
-            </h1>
+        <h1 className="text-5xl font-rancho text-center font-bold mb-12">
+          Add Tourist Spot
+        </h1>
         {/* row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="w-full">
@@ -266,7 +265,6 @@ const AddTouristSpot = () => {
             />
           </div>
         </div>
-
 
         <button className="py-3 w-full rounded-md bg-primary-main text-white text-center  font-semibold uppercase relative hover:bg-primary-dark  overflow-hidden transition-all duration-500  before:absolute before:w-full before:h-[40%] before:bg-white before:top-3 before:left-0 before:-translate-x-full before:rotate-45 before:transition-all before:duration-500 hover:before:translate-x-full hover:before:rotate-45">
           Add
