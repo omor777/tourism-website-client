@@ -34,6 +34,9 @@ export default {
         loginBg:
           "url('https://i.ibb.co/G0SfWvr/undraw-Access-account-re-8spm.png')",
       },
+      boxShadow: {
+        card: "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;",
+      },
     },
   },
   plugins: [require("daisyui")],

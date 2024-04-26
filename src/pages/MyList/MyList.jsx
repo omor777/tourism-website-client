@@ -56,30 +56,30 @@ const MyList = () => {
   return (
     <div className="container">
       <div className="overflow-x-auto">
-        <table className="table border border-collapse border-primary-light rounded ">
+        <table className="md:table table-sm border border-primary-extraLight text-center">
           {/* head */}
           <thead>
             <tr className="bg-primary-main text-white">
-              <th className="text-base ">ID</th>
-              <th className="text-base ">Name</th>
-              <th className="text-base ">Country</th>
-              <th className="text-base ">TouristSpotName</th>
-              <th className="text-base ">Location</th>
-              <th className="text-base ">Action</th>
+              <th className="md:text-base">ID</th>
+              <th className="md:text-base ">Name</th>
+              <th className="md:text-base ">Country</th>
+              <th className="md:text-base ">TouristSpotName</th>
+              <th className="md:text-base ">Location</th>
+              <th className="md:text-base ">Action</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {myTouristSpots?.map((spot, index) => (
               <tr key={spot._id}>
-                <td className="text-base">{index + 1}</td>
-                <td className="text-base">{spot.username}</td>
-                <td className="text-base">{spot.country_name}</td>
-                <td className="text-base">{spot.tourist_spot_name}</td>
-                <td className="text-base">{spot.location}</td>
-                <td className="text-base">
+                <td className="md:text-base">{index + 1}</td>
+                <td className="md:text-base">{spot.username}</td>
+                <td className="md:text-base">{spot.country_name}</td>
+                <td className="md:text-base">{spot.tourist_spot_name}</td>
+                <td className="md:text-base">{spot.location}</td>
+                <td className="md:text-base">
                   <Link to={`/update_my_list/${spot._id}`}>
-                    <button className="bg-primary-main p-2.5 rounded-md mr-4">
+                    <button className="bg-primary-main p-2.5 rounded-md mb-3 lg:mb-0 md:mr-4">
                       <FaEdit className="text-xl text-white" />
                     </button>
                   </Link>

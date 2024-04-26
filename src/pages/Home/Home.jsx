@@ -1,8 +1,11 @@
+import TouristSpots from "../../components/TouristSpots/TouristSpots";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <TouristSpots />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
