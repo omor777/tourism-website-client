@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 import { FaDollarSign } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoTime } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const TouristSpotCard = ({ spot }) => {
   const {
+    _id,
     tourist_spot_name,
     country_name,
     short_description,
@@ -37,9 +39,11 @@ const TouristSpotCard = ({ spot }) => {
           <p className="text-gray-500">{short_description}</p>
         </div>
         <div className="flex items-center justify-between mt-4">
-          <button className="py-2.5 px-5 mt-3  bg-primary-main text-white text-center  font-semibold uppercase relative hover:bg-primary-dark  overflow-hidden transition-all duration-500  before:absolute before:w-full before:h-[40%] before:bg-white before:top-3 before:left-0 before:-translate-x-full before:rotate-45 before:transition-all before:duration-500 hover:before:translate-x-full hover:before:rotate-45">
-            View Details
-          </button>
+          <Link to={`/details/${_id}`}>
+            <button className="py-2.5 px-5 mt-3  bg-primary-main text-white text-center  font-semibold uppercase relative hover:bg-primary-dark  overflow-hidden transition-all duration-500  before:absolute before:w-full before:h-[40%] before:bg-white before:top-3 before:left-0 before:-translate-x-full before:rotate-45 before:transition-all before:duration-500 hover:before:translate-x-full hover:before:rotate-45">
+              View Details
+            </button>
+          </Link>
           <div>
             <h1 className="flex flex-wrap items-center text-black/80 ">
               <FaDollarSign className="text-xl" />{" "}
