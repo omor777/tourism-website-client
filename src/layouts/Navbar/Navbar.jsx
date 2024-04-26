@@ -43,30 +43,34 @@ const Navbar = () => {
               All Tourist Spot
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "font-bold text-primary-main"
-                  : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
-              }
-              to="/addTouristSpot"
-            >
-              AddTouristSpot
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "font-bold text-primary-main"
-                  : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
-              }
-              to="/myList"
-            >
-              My List
-            </NavLink>
-          </li>
+          {user && (
+            <>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-bold text-primary-main"
+                      : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                  }
+                  to="/addTouristSpot"
+                >
+                  AddTouristSpot
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-bold text-primary-main"
+                      : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                  }
+                  to="/myList"
+                >
+                  My List
+                </NavLink>
+              </li>
+            </>
+          )}
         </ul>
         {user ? (
           <Link>
