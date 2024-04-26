@@ -7,6 +7,8 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import MyList from "../pages/MyList/MyList";
 import Register from "../pages/Register/Register";
+import UpdateMyList from "../pages/UpdateMyList/UpdateMyList";
+import API_URL from "../utils/api";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,15 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/update_my_list/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateMyList />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => fetch(`${API_URL}/update_tourist_spot/${params.id}`),
       },
       {
         path: "/login",

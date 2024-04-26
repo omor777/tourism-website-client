@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { RiDeleteBinFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import API_URL from "../../utils/api";
@@ -10,14 +11,14 @@ const MyList = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`${API_URL}/my_tourist_spot/${user?.email}`)
+    fetch(`${API_URL}/tourist_spots/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyTouristSpots(data);
       });
   }, [user]);
 
-  const handleDeleteTourisSpot = (id) => {
+  const handleDeleteTouristSpot = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You want delete this spot!",
@@ -77,11 +78,13 @@ const MyList = () => {
                 <td className="text-base">{spot.tourist_spot_name}</td>
                 <td className="text-base">{spot.location}</td>
                 <td className="text-base">
-                  <button className="bg-primary-main p-2.5 rounded-md mr-4">
-                    <FaEdit className="text-xl text-white" />
-                  </button>
+                  <Link to={`/update_my_list/${spot._id}`}>
+                    <button className="bg-primary-main p-2.5 rounded-md mr-4">
+                      <FaEdit className="text-xl text-white" />
+                    </button>
+                  </Link>
                   <button
-                    onClick={() => handleDeleteTourisSpot(spot._id)}
+                    onClick={() => handleDeleteTouristSpot(spot._id)}
                     className="p-2.5 bg-error rounded-md"
                   >
                     <RiDeleteBinFill className="text-xl text-white" />
