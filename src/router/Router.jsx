@@ -4,6 +4,7 @@ import TouristSpotDetails from "../components/TouristSpotDetails/TouristSpotDeta
 import Root from "../layouts/Root/Root";
 import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../pages/AllTouristSpot/AllTouristSpot";
+import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import MyList from "../pages/MyList/MyList";
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: "",
+    errorElement: <Error />,
     children: [
       {
         path: "/",

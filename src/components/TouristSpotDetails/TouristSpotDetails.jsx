@@ -21,8 +21,7 @@ const TouristSpotDetails = () => {
   }, [id]);
 
   const {
-    username,
-    email,
+ 
     tourist_spot_name,
     country_name,
     location,
