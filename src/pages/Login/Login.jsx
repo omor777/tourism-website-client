@@ -1,4 +1,3 @@
-import { DevTool } from "@hookform/devtools";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,12 +8,7 @@ const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useAuth();
   const form = useForm();
 
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = form;
+  const { register, handleSubmit } = form;
 
   const navigator = useNavigate();
 
@@ -22,7 +16,7 @@ const Login = () => {
     const { email, password } = data;
 
     loginUser(email, password)
-      .then((result) => {
+      .then(() => {
         Swal.fire({
           title: "Login successful 😀",
           icon: "success",
@@ -127,7 +121,6 @@ const Login = () => {
         </div>
         <div className="bg-loginBg bg-center bg-cover bg-no-repeat border-b lg:border-b-0 lg:border-l border-primary-light min-h-[630px] order-1 lg:order-2"></div>
       </div>
-      <DevTool control={control} />
     </div>
   );
 };
