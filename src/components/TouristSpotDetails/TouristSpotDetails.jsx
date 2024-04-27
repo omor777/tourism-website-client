@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaClock, FaDollarSign } from "react-icons/fa";
-import { FaLocationDot, FaPerson } from "react-icons/fa6";
+import { FaLocationDot, FaPeopleGroup, FaPerson } from "react-icons/fa6";
 import { GiWinterHat } from "react-icons/gi";
 import { IoIosUmbrella } from "react-icons/io";
 import { useParams } from "react-router-dom";
@@ -90,7 +90,7 @@ const TouristSpotDetails = () => {
               <span className="text-lg font-semibold capitalize mr-1.5">
                 yearly total visitors:
               </span>
-              <FaPerson className="text-primary-main text-xl" />
+              <FaPeopleGroup className="text-primary-main text-xl" />
               <span className="font-medium capitalize ">
                 {total_visitors_per_year}{" "}
               </span>

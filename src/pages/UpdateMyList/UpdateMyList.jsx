@@ -25,7 +25,7 @@ const UpdateMyList = () => {
     const country_name = form.country_name.value;
     const location = form.location.value;
     const short_description = form.short_description.value;
-    const average_cost = form.average_cost.value;
+    const average_cost = parseInt(form.average_cost.value);
     const seasonality = form.seasonality.value;
     const travel_time = form.travel_time.value;
     const total_visitors_per_year = form.total_visitors_per_year.value;

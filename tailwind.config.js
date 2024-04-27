@@ -6,7 +6,7 @@ export default {
       sm: "576px",
       md: "768px",
       lg: "1024px",
-      xl: "1220px",
+      xl: "1270px",
     },
     extend: {
       colors: {
@@ -36,6 +36,7 @@ export default {
       },
       boxShadow: {
         card: "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;",
+        "card-2": " rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
       },
     },
   },

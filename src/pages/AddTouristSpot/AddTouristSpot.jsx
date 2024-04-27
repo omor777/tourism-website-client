@@ -93,6 +93,7 @@ const AddTouristSpot = () => {
               className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
               id="name"
               type="text"
+              disabled={true}
               placeholder="username"
               {...register("username")}
             />
@@ -108,6 +109,7 @@ const AddTouristSpot = () => {
               className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
               id="email"
               type="email"
+              disabled={true}
               placeholder="email"
               {...register("email")}
             />

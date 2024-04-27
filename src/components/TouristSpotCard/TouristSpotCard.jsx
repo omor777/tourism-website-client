@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
-import { FaDollarSign } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoTime } from "react-icons/io5";
+import { FaClock, FaDollarSign } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiWinterHat } from "react-icons/gi";
+import { IoIosUmbrella } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const TouristSpotCard = ({ spot }) => {
@@ -12,33 +13,45 @@ const TouristSpotCard = ({ spot }) => {
     short_description,
     average_cost,
     photo_url,
+    total_visitors_per_year,
+    seasonality,
+    travel_time,
   } = spot;
 
   return (
-    <div className=" gap-5 border shadow-card">
-      <figure>
+    <div className=" gap-5 border shadow-card ">
+      <figure className="relative">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
+        <div className="bg-white shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded">
+          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+            <FaClock className="text-lg text-primary-main" />
+            {travel_time} days
+          </p>
+          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+            {seasonality === "sumer" ? (
+              <IoIosUmbrella className="text-lg text-primary-main" />
+            ) : (
+              <GiWinterHat className="text-lg text-primary-main" />
+            )}
+            {seasonality}
+          </p>
+          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+            <FaPeopleGroup className="text-lg text-primary-main" />
+            {total_visitors_per_year}
+          </p>
+        </div>
+        <span className="absolute bg-primary-main text-white text-sm py-1.5 px-3 font-semibold top-3 left-3 shadow-card-2 rounded capitalize">
+          {country_name}
+        </span>
       </figure>
-      <div className="flex flex-col justify-between mt-5  p-5">
+      <div className="grid grid-rows-[1fr_auto] mt-10  p-5  h-[260px]">
         {/* content */}
         <div className="space-y-4">
           <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
-          <div className="flex items-center justify-between">
-            <p className="flex items-center gap-2">
-              <span className="p-2.5 bg-blue-50 rounded-full">
-                <FaLocationDot className="text-blue-500" />{" "}
-              </span>{" "}
-              <span className="text-xl font-medium capitalize">
-                {country_name}
-              </span>
-            </p>
-            <p className="capitalize flex items-center gap-2 font-semibold">
-              <IoTime className="text-xl text-primary-main" />7 days
-            </p>
-          </div>
+
           <p className="text-gray-500">{short_description}</p>
         </div>
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between flex-wrap gap-y-3 ">
           <Link to={`/details/${_id}`}>
             <button className="py-2.5 px-5 mt-3  bg-primary-main text-white text-center  font-semibold uppercase relative hover:bg-primary-dark  overflow-hidden transition-all duration-500  before:absolute before:w-full before:h-[40%] before:bg-white before:top-3 before:left-0 before:-translate-x-full before:rotate-45 before:transition-all before:duration-500 hover:before:translate-x-full hover:before:rotate-45">
               View Details
