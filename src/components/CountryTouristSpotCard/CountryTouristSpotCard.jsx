@@ -1,23 +1,22 @@
-import PropTypes from "prop-types";
-import { FaClock, FaDollarSign } from "react-icons/fa";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { GiWinterHat } from "react-icons/gi";
-import { IoIosUmbrella } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { FaClock, FaDollarSign } from "react-icons/fa"
+import { FaPeopleGroup } from "react-icons/fa6"
+import { GiWinterHat } from "react-icons/gi"
+import { IoIosUmbrella } from "react-icons/io"
+import { Link } from "react-router-dom"
 
-const TouristSpotCard = ({ spot }) => {
-  const {
-    _id,
-    tourist_spot_name,
-    country_name,
-    short_description,
-    average_cost,
-    photo_url,
-    total_visitors_per_year,
-    seasonality,
-    travel_time,
-  } = spot;
 
+const CountryTouristSpotCard = ({country}) => {
+    const {
+        _id,
+        tourist_spot_name,
+        country_name,
+        short_description,
+        average_cost,
+        photo_url,
+        total_visitors_per_year,
+        seasonality,
+        travel_time,
+      } = country
   return (
     <div className=" gap-5 border shadow-card ">
       <figure className="relative">
@@ -37,7 +36,7 @@ const TouristSpotCard = ({ spot }) => {
           </p>
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
             <FaPeopleGroup className="text-lg text-primary-main" />
-            {total_visitors_per_year} M
+            {total_visitors_per_year} m
           </p>
         </div>
       </figure>
@@ -66,11 +65,7 @@ const TouristSpotCard = ({ spot }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-TouristSpotCard.propTypes = {
-  spot: PropTypes.object.isRequired,
-};
-
-export default TouristSpotCard;
+export default CountryTouristSpotCard

@@ -54,8 +54,8 @@ const UpdateMyList = () => {
       .then((data) => {
         if (data.modifiedCount > 0) {
           Swal.fire({
-            title: "UPDATED!",
-            text: "Your spot has been updated!",
+            title: "Updated!",
+            text: "Your tourist spot has been updated!",
             icon: "success",
           });
         }

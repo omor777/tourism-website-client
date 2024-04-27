@@ -7,7 +7,7 @@ const Root = () => {
     <main>
       <section >
         <div>
-          <div className="sticky top-0">
+          <div className="">
             <Navbar />
           </div>
         </div>

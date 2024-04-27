@@ -4,6 +4,7 @@ import TouristSpotDetails from "../components/TouristSpotDetails/TouristSpotDeta
 import Root from "../layouts/Root/Root";
 import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../pages/AllTouristSpot/AllTouristSpot";
+import CountryTouristSpot from "../pages/CountryTouristSpot/CountryTouristSpot";
 import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/touristSpots/:country",
+        element: <CountryTouristSpot />,
       },
       {
         path: "/update_my_list/:id",

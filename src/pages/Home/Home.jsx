@@ -9,9 +9,9 @@ const Home = () => {
       <div className="mt-20">
         <Banner />
       </div>
-      {/* <div className="mt-24">
+      <div className="mt-24">
         <TouristSpots />
-      </div> */}
+      </div>
       <div>
         <Countries />
       </div>
