@@ -13,7 +13,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <header className=" py-5">
+    <header className=" py-5 shadow-nav">
       <nav className="container flex items-center justify-between">
         <h3 className="text-3xl font-bold text-primary-dark font-rancho">
           Explore<span>Echo</span>

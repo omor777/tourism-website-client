@@ -7,7 +7,9 @@ const Root = () => {
     <main>
       <section className="grid grid-rows-[auto_1fr_auto] min-h-screen">
         <div>
-          <Navbar />
+          <div className="sticky top-0">
+            <Navbar />
+          </div>
         </div>
         <div>
           <Outlet />
