@@ -18,16 +18,19 @@ const Navbar = () => {
   return (
     <header className=" py-5 shadow-nav">
       <nav className="container flex items-center justify-between">
-        <h3 className="text-3xl font-bold text-primary-dark font-rancho">
-          Explore<span>Echo</span>
-        </h3>
+        <Link
+          to="/"
+          className="bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent font-bold text-3xl"
+        >
+          JourneyJo
+        </Link>
         <ul className="hidden lg:flex items-center gap-7">
           <li>
             <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "font-bold text-primary-main"
-                  : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                  : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
               }
               to="/"
             >
@@ -39,7 +42,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-bold text-primary-main"
-                  : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                  : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
               }
               to="/allTouristSpot"
             >
@@ -53,7 +56,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "font-bold text-primary-main"
-                      : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                      : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
                   }
                   to="/addTouristSpot"
                 >
@@ -65,7 +68,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "font-bold text-primary-main"
-                      : "text-lg font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+                      : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
                   }
                   to="/myList"
                 >
@@ -80,12 +83,15 @@ const Navbar = () => {
             <div className="flex items-center gap-5">
               <div>
                 <img
-                 data-tooltip-id="my-tooltip"
+                  data-tooltip-id="my-tooltip"
                   data-tooltip-content={user?.displayName}
                   className="size-12 rounded-full border-4 cursor-pointer border-primary-main"
                   src={user?.photoURL}
                 />
-                <Tooltip style={{backgroundColor:'#3B82F6',fontWeight:600}} id="my-tooltip" />
+                <Tooltip
+                  style={{ backgroundColor: "#3B82F6", fontWeight: 600 }}
+                  id="my-tooltip"
+                />
               </div>
               <Link>
                 <button

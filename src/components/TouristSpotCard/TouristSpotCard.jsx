@@ -40,9 +40,6 @@ const TouristSpotCard = ({ spot }) => {
             {total_visitors_per_year}
           </p>
         </div>
-        <span className="absolute bg-primary-main text-white text-sm py-1.5 px-3 font-semibold top-3 left-3 shadow-card-2 rounded capitalize">
-          {country_name}
-        </span>
       </figure>
       <div className="grid grid-rows-[1fr_auto] mt-10  p-5  h-[260px]">
         {/* content */}

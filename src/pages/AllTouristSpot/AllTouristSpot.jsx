@@ -43,9 +43,9 @@ const AllTouristSpot = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container ">
       <div className="mb-10">
-        <h1 className="text-6xl font-rancho text-center mb-4 capitalize text-black/70">
+        <h1 className="text-5xl font-rancho text-center mb-4 capitalize font-bold text-black/70">
           All Tourist Spots
         </h1>
         <p className="max-w-xl mx-auto text-center text-gray-600">
