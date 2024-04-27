@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-gray-800 text-white/80">
-        <div className="container footer py-16   mt-24">
+        <div className="container footer py-16 mt-24">
           <aside>
             <h1 className="text-3xl font-bold">JourneyJoy</h1>
             <p className="max-w-sm mt-2 leading-6">
