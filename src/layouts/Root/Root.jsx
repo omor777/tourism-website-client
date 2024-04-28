@@ -23,7 +23,7 @@ const Root = () => {
         <main>
           <section>
             <div>
-              <div className="shadow-md fixed top-0 w-full z-30 px-4 md:px-0">
+              <div className="shadow-md fixed top-0 w-full z-[100] px-4 md:px-0">
                 <Navbar />
               </div>
             </div>
@@ -37,7 +37,7 @@ const Root = () => {
         </main>
         {/* Page content here */}
       </div>
-      <div className="drawer-side z-50">
+      <div className="drawer-side z-[999]">
         <label
           htmlFor="my-drawer"
           aria-label="close sidebar"
