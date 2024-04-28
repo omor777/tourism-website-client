@@ -80,7 +80,7 @@ const TouristSpotDetails = () => {
                 <span className="text-lg font-semibold capitalize mr-1.5">
                   seasonality:
                 </span>
-                {seasonality === "sumer" ? (
+                {seasonality === "Summer" ? (
                   <IoIosUmbrella className="text-primary-main text-xl" />
                 ) : (
                   <GiWinterHat className="text-primary-main text-xl" />

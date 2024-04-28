@@ -1,9 +1,16 @@
-# React + Vite
+# JourneyJoy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site: [https://tourism-website-client.vercel.app](https://real-state-9e79a.web.app/)
 
-Currently, two official plugins are available:
+## Features and Characteristics:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# B9A10-client-side-omor777
+- Plan personalized travel itineraries based on preferences, budget, and travel dates.
+- User-friendly interface with intuitive navigation
+- Responsive design for seamless experience across devices
+- Secure user authentication and authorization system
+- Easily book flights, hotels, tours, and activities directly on our website.
+- Interactive elements for enhanced user engagement
+
+## My Selected Category:
+
+- Southeast Asia

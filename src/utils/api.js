@@ -1,3 +1,3 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://turism-website-server.vercel.app";
 
 export default API_URL;

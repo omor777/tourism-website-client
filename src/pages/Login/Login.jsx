@@ -1,16 +1,17 @@
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useAuth();
   const form = useForm();
-
   const { register, handleSubmit } = form;
 
   const navigator = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   const handleLogin = (data) => {
     const { email, password } = data;
@@ -22,7 +23,7 @@ const Login = () => {
           icon: "success",
         });
 
-        navigator("/");
+        navigator(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -37,7 +38,7 @@ const Login = () => {
   const handleGoogleLogin = (params) => {
     googleLogin()
       .then((result) => {
-        navigator("/");
+        navigator(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
   };
@@ -45,7 +46,7 @@ const Login = () => {
   const handleGithubLogin = () => {
     githubLogin()
       .then(() => {
-        navigator("/");
+        navigator(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
   };
@@ -53,7 +54,7 @@ const Login = () => {
   return (
     <section className="container min-h-[calc(100vh-632px)] mt-40">
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 border border-primary-extraLight  overflow-hidden">
+        <div className=" border border-primary-extraLight  overflow-hidden">
           <div className="p-10 order-2 lg:order-1">
             <form onSubmit={handleSubmit(handleLogin)}>
               <h1 className="text-4xl font-rancho text-center font-bold mb-8">
@@ -118,9 +119,8 @@ const Login = () => {
               >
                 Register
               </Link>
-          </p>
+            </p>
           </div>
-          <div className="bg-loginBg bg-center bg-cover bg-no-repeat border-b lg:border-b-0 lg:border-l border-primary-light min-h-[630px] order-1 lg:order-2 "></div>
         </div>
       </div>
     </section>

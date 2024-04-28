@@ -23,11 +23,11 @@ const TouristSpotCard = ({ spot }) => {
       <figure className="relative">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
         <div className="shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded bg-base-100">
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaClock className="text-lg text-primary-main" />
             {travel_time} days
           </p>
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             {seasonality === "Summer" ? (
               <IoIosUmbrella className="text-lg text-primary-main" />
             ) : seasonality === "Winter" ? (
@@ -37,7 +37,7 @@ const TouristSpotCard = ({ spot }) => {
             )}
             {seasonality}
           </p>
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaPeopleGroup className="text-lg text-primary-main" />
             {total_visitors_per_year} M
           </p>

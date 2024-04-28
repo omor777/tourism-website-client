@@ -30,10 +30,6 @@ export default {
         rancho: ["'Rancho', cursive"],
       },
       backgroundImage: {
-        formBg: "url('https://i.ibb.co/R2ytr9K/signup.png')",
-        loginBg:
-          "url('https://i.ibb.co/G0SfWvr/undraw-Access-account-re-8spm.png')",
-
         "slider-1":
           "linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i.postimg.cc/7YG59S4k/esmonde-yong-9-B08udu-My-Y-unsplash-1.jpg')",
         "slider-2":

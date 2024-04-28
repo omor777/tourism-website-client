@@ -21,7 +21,6 @@ const Navbar = () => {
   const handleTheme = () => {
     setTheme(!theme);
   };
-  console.log(theme);
 
   useEffect(() => {
     if (theme) {
@@ -90,7 +89,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5 ">
           {/* theme control */}
-          <div >
+          <div>
             <label className="swap swap-rotate -bottom-1">
               {/* this hidden checkbox controls the state */}
               <input onChange={handleTheme} type="checkbox" />

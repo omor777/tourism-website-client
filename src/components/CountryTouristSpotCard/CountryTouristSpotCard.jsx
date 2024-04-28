@@ -22,11 +22,11 @@ const CountryTouristSpotCard = ({ country }) => {
       <figure className="relative">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
         <div className="bg-base-100 shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded">
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaClock className="text-lg text-primary-main" />
             {travel_time} days
           </p>
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             {seasonality === "sumer" ? (
               <IoIosUmbrella className="text-lg text-primary-main" />
             ) : (
@@ -34,7 +34,7 @@ const CountryTouristSpotCard = ({ country }) => {
             )}
             {seasonality}
           </p>
-          <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
+          <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaPeopleGroup className="text-lg text-primary-main" />
             {total_visitors_per_year} m
           </p>
@@ -43,7 +43,14 @@ const CountryTouristSpotCard = ({ country }) => {
       <div className="grid grid-rows-[1fr_auto] mt-10  p-5  h-[260px]">
         {/* content */}
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
+          <div className="flex items-center justify-between">
+            <h1 className="text-2xl font-bold capitalize">
+              {tourist_spot_name}
+            </h1>
+            <p className="text-sm font-bold tracking-wide border border-primary-main py-0.5 px-1.5 rounded-full bg-blue-50 text-primary-main">
+              {country_name}
+            </p>
+          </div>
 
           <p className="text-gray-500">{short_description}</p>
         </div>
