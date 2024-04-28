@@ -5,7 +5,6 @@ import useAuth from "../../hooks/useAuth";
 const Navbar = () => {
   const { user, logoutUser } = useAuth();
 
-  console.log(user);
 
   const navigator = useNavigate();
   const handleLogout = () => {
@@ -16,7 +15,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <header className=" py-5 shadow-nav">
+    <header className="py-5">
       <nav className="container flex items-center justify-between">
         <Link
           to="/"
@@ -46,7 +45,7 @@ const Navbar = () => {
               }
               to="/allTouristSpot"
             >
-              All Tourist Spot
+              AllTouristSpots
             </NavLink>
           </li>
           {user && (
@@ -60,7 +59,7 @@ const Navbar = () => {
                   }
                   to="/addTouristSpot"
                 >
-                  Add Tourist Spot
+                  AddTouristSpot
                 </NavLink>
               </li>
               <li>
@@ -72,7 +71,7 @@ const Navbar = () => {
                   }
                   to="/myList"
                 >
-                  My List
+                  MyList
                 </NavLink>
               </li>
             </>

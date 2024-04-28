@@ -7,7 +7,7 @@ const Root = () => {
     <main>
       <section >
         <div>
-          <div className="">
+          <div className="shadow-md ">
             <Navbar />
           </div>
         </div>

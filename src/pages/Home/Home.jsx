@@ -5,8 +5,8 @@ import TouristSpots from "../../components/TouristSpots/TouristSpots";
 
 const Home = () => {
   return (
-    <section>
-      <div className="mt-20">
+    <section className="container min-h-[calc(100vh-632px)]  mt-20">
+      <div>
         <Banner />
       </div>
       <div className="mt-24">

@@ -1,22 +1,21 @@
-import { FaClock, FaDollarSign } from "react-icons/fa"
-import { FaPeopleGroup } from "react-icons/fa6"
-import { GiWinterHat } from "react-icons/gi"
-import { IoIosUmbrella } from "react-icons/io"
-import { Link } from "react-router-dom"
+import { FaClock, FaDollarSign } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiWinterHat } from "react-icons/gi";
+import { IoIosUmbrella } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-
-const CountryTouristSpotCard = ({country}) => {
-    const {
-        _id,
-        tourist_spot_name,
-        country_name,
-        short_description,
-        average_cost,
-        photo_url,
-        total_visitors_per_year,
-        seasonality,
-        travel_time,
-      } = country
+const CountryTouristSpotCard = ({ country }) => {
+  const {
+    _id,
+    tourist_spot_name,
+    country_name,
+    short_description,
+    average_cost,
+    photo_url,
+    total_visitors_per_year,
+    seasonality,
+    travel_time,
+  } = country;
   return (
     <div className=" gap-5 border shadow-card ">
       <figure className="relative">
@@ -65,7 +64,7 @@ const CountryTouristSpotCard = ({country}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CountryTouristSpotCard
+export default CountryTouristSpotCard;

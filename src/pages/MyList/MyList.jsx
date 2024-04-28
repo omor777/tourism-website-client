@@ -54,13 +54,12 @@ const MyList = () => {
   };
 
   return (
-    <div className="container">
-      <div className="overflow-x-auto">
+    <div className="container min-h-[calc(100vh-632px)]  mt-20">
+      <div className="overflow-x-auto w-full">
         <table className="md:table table-sm border border-primary-extraLight text-center">
           {/* head */}
           <thead>
             <tr className="bg-primary-main text-white">
-              <th className="md:text-base">ID</th>
               <th className="md:text-base ">Name</th>
               <th className="md:text-base ">Country</th>
               <th className="md:text-base ">TouristSpotName</th>
@@ -72,7 +71,6 @@ const MyList = () => {
             {/* row 1 */}
             {myTouristSpots?.map((spot, index) => (
               <tr key={spot._id}>
-                <td className="md:text-base">{index + 1}</td>
                 <td className="md:text-base">{spot.username}</td>
                 <td className="md:text-base">{spot.country_name}</td>
                 <td className="md:text-base">{spot.tourist_spot_name}</td>

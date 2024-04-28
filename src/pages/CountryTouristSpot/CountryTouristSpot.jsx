@@ -29,15 +29,17 @@ const CountryTouristSpot = () => {
   }
 
   return (
-    <div className="container mt-24">
-      <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {countryTouristSpots?.map((country) => (
-            <CountryTouristSpotCard key={country._id} country={country} />
-          ))}
+    <section className="container min-h-[calc(100vh-632px)]  mt-20">
+      <div className="w-full">
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {countryTouristSpots?.map((country) => (
+              <CountryTouristSpotCard key={country._id} country={country} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
