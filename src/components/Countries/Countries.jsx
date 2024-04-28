@@ -16,11 +16,14 @@ const Countries = () => {
   return (
     <div className="container mt-24">
       <div className="">
-        <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+        <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
           Journey Through Diverse Destinations
         </h1>
         <p className="text-center max-w-2xl mx-auto mt-4">
-        Embark on a voyage of discovery as you uncover the richness of our planet&apos;s many nations. From the lush rainforests of Costa Rica to the snow-capped peaks of Nepal, each country holds its own treasures waiting to be explored.
+          Embark on a voyage of discovery as you uncover the richness of our
+          planet&apos;s many nations. From the lush rainforests of Costa Rica to
+          the snow-capped peaks of Nepal, each country holds its own treasures
+          waiting to be explored.
         </p>
       </div>
 
@@ -29,7 +32,7 @@ const Countries = () => {
           const { _id, image, country_name, description } = country;
           return (
             <Link key={_id} to={`/touristSpots/${country_name}`}>
-              <div className=" p-4 rounded-md shadow-card bg-gray-50 text-gray-900 flex flex-col justify-between h-[470px]">
+              <div className=" p-4 rounded-md shadow-card flex flex-col justify-between h-[470px] border">
                 <img
                   src={image}
                   className="object-cover object-center w-full rounded-md h-60 bg-gray-500"
@@ -39,7 +42,7 @@ const Countries = () => {
                     {country_name}
                   </h2>
                 </div>
-                <p className="text-gray-800">{description}</p>
+                <p>{description}</p>
               </div>
             </Link>
           );

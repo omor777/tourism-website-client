@@ -46,7 +46,7 @@ const AllTouristSpot = () => {
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div>
         <div>
-          <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+          <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
             Explore Our Tourist Spot Gallery
           </h1>
           <p className="text-center max-w-2xl mx-auto mt-4">

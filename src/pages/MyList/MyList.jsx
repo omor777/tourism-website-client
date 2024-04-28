@@ -75,7 +75,7 @@ const MyList = () => {
                 <td className="md:text-base">{spot.country_name}</td>
                 <td className="md:text-base">{spot.tourist_spot_name}</td>
                 <td className="md:text-base">{spot.location}</td>
-                <td className="md:text-base">
+                <td className="md:text-base ">
                   <Link to={`/update_my_list/${spot._id}`}>
                     <button className="bg-primary-main p-2.5 rounded-md mb-3 lg:mb-0 md:mr-4">
                       <FaEdit className="text-xl text-white" />

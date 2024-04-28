@@ -2,7 +2,7 @@ const Testimonial = () => {
   return (
     <section className="container  mt-24">
       <div className="">
-        <h1 className="text-5xl font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
           What Our Visitors Say
         </h1>
         <p className="text-center max-w-2xl mx-auto mt-4">

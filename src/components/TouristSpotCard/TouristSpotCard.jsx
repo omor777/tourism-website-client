@@ -22,7 +22,7 @@ const TouristSpotCard = ({ spot }) => {
     <div className=" gap-5 border shadow-card ">
       <figure className="relative">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
-        <div className="bg-white shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded">
+        <div className="shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded bg-base-100">
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
             <FaClock className="text-lg text-primary-main" />
             {travel_time} days
@@ -30,9 +30,11 @@ const TouristSpotCard = ({ spot }) => {
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
             {seasonality === "Summer" ? (
               <IoIosUmbrella className="text-lg text-primary-main" />
-            )  : seasonality === "Winter" ? (
+            ) : seasonality === "Winter" ? (
               <GiWinterHat className="text-lg text-primary-main" />
-            ) : ''}
+            ) : (
+              ""
+            )}
             {seasonality}
           </p>
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
@@ -46,7 +48,7 @@ const TouristSpotCard = ({ spot }) => {
         <div className="space-y-4">
           <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
 
-          <p className="text-gray-500">{short_description}</p>
+          <p>{short_description}</p>
         </div>
         <div className="flex items-center justify-between flex-wrap gap-y-3 ">
           <Link to={`/details/${_id}`}>
@@ -55,12 +57,10 @@ const TouristSpotCard = ({ spot }) => {
             </button>
           </Link>
           <div>
-            <h1 className="flex flex-wrap items-center text-black/80 ">
+            <h1 className="flex flex-wrap items-center">
               <FaDollarSign className="text-xl" />{" "}
               <span className="text-2xl font-bold">{average_cost}</span>
-              <span className="text-sm font-medium ml-0.5 text-gray-700">
-                / Average
-              </span>
+              <span className="text-sm font-medium ml-0.5 ">/ Average</span>
             </h1>
           </div>
         </div>
