@@ -28,11 +28,11 @@ const TouristSpotCard = ({ spot }) => {
             {travel_time} days
           </p>
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">
-            {seasonality === "sumer" ? (
+            {seasonality === "Summer" ? (
               <IoIosUmbrella className="text-lg text-primary-main" />
-            ) : (
+            )  : seasonality === "Winter" ? (
               <GiWinterHat className="text-lg text-primary-main" />
-            )}
+            ) : ''}
             {seasonality}
           </p>
           <p className="text-xs font-semibold capitalize flex items-center gap-1.5">

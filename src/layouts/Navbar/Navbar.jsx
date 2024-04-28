@@ -5,7 +5,6 @@ import useAuth from "../../hooks/useAuth";
 const Navbar = () => {
   const { user, logoutUser } = useAuth();
 
-
   const navigator = useNavigate();
   const handleLogout = () => {
     logoutUser()
@@ -15,7 +14,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <header className="py-5">
+    <header className="py-5 bg-white">
       <nav className="container flex items-center justify-between">
         <Link
           to="/"

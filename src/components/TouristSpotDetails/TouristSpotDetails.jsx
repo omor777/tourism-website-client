@@ -34,7 +34,7 @@ const TouristSpotDetails = () => {
 
   return (
     <section className="container min-h-[calc(100vh-632px)] mt-20">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="border border-primary-extraLight lg:col-span-8 rounded overflow-hidden">
           <figure className="relative">
             <img className="h-[480px] w-full object-cover" src={photo_url} />

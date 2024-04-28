@@ -1,8 +1,9 @@
-.slick-dots li button:before {
-  font-size: 15px;
-  top: -40px;
-  color: white;
+.swiper-pagination-bullet-active {
+  background: white;
   opacity: 1;
 }
 
-
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}

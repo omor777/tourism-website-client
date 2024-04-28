@@ -33,12 +33,13 @@ export default {
         formBg: "url('https://i.ibb.co/R2ytr9K/signup.png')",
         loginBg:
           "url('https://i.ibb.co/G0SfWvr/undraw-Access-account-re-8spm.png')",
+
         "slider-1":
-          "linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/QQY541r/alejandro-cartagena-B64-B6-k-AWlw-unsplash.jpg')",
+          "linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i.postimg.cc/7YG59S4k/esmonde-yong-9-B08udu-My-Y-unsplash-1.jpg')",
         "slider-2":
-          "linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/0J407bG/colin-watts-M1-Obxvs-WVh-Y-unsplash.jpg')",
+          "linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i.postimg.cc/kgd61Dwh/miltiadis-fragkidis-UB2u-L4-RFTHA-unsplash.jpg')",
         "slider-3":
-          "linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/BftzTD0/ice-tea-n-Gj-A-Pbu-Uv4-unsplash.jpg')",
+          "linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i.postimg.cc/wMKbyhck/recal-media-ue-BIGLmi-I5-A-unsplash.jpg')",
       },
       boxShadow: {
         card: "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;",

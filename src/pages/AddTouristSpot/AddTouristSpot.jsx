@@ -74,7 +74,7 @@ const AddTouristSpot = () => {
   };
 
   return (
-    <section className="container min-h-[calc(100vh-632px)]  mt-20">
+    <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div className="w-full">
         <form
           ref={formRef}
@@ -224,9 +224,6 @@ const AddTouristSpot = () => {
               >
                 <option value="Winter">Winter</option>
                 <option value="Summer">Summer</option>
-                <option value="Autumn">Autumn</option>
-                <option value="Monsoon">Monsoon</option>
-                <option value="Spring">Spring</option>
               </select>
             </div>
           </div>

@@ -54,7 +54,7 @@ const MyList = () => {
   };
 
   return (
-    <div className="container min-h-[calc(100vh-632px)]  mt-20">
+    <div className="container min-h-[calc(100vh-632px)]  mt-40">
       <div className="overflow-x-auto w-full">
         <table className="md:table table-sm border border-primary-extraLight text-center">
           {/* head */}

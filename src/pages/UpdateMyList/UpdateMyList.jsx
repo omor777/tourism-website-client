@@ -98,14 +98,19 @@ const UpdateMyList = () => {
               >
                 country name
               </label>
-              <input
-                className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
-                id="country_name"
-                type="text"
-                placeholder="country name"
-                name="country_name"
+              <select
                 defaultValue={country_name}
-              />
+                className=" block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
+                name="country_name"
+                id="country_name"
+              >
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Cambodia">Cambodia</option>
+              </select>
             </div>
           </div>
           {/* row */}
@@ -168,14 +173,15 @@ const UpdateMyList = () => {
               >
                 seasonality
               </label>
-              <input
-                className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
-                id="seasonality"
-                type="text"
-                placeholder="seasonality"
-                name="seasonality"
+              <select
                 defaultValue={seasonality}
-              />
+                className=" block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
+                name="seasonality"
+                id="seasonality"
+              >
+                <option value="Winter">Winter</option>
+                <option value="Summer">Summer</option>
+              </select>
             </div>
           </div>
 
@@ -188,14 +194,18 @@ const UpdateMyList = () => {
               >
                 travel time
               </label>
-              <input
-                className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize "
-                id="travel_time"
-                type="text"
-                placeholder="travel time"
-                name="travel_time"
+              <select
                 defaultValue={travel_time}
-              />
+                className=" block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
+                name="travel_time"
+                id="travel_time"
+              >
+                <option value="1-3">1-3 Days</option>
+                <option value="4-7">4-7 Days</option>
+                <option value="8-11">8-11 Days</option>
+                <option value="12-15">12-15 Days</option>
+                <option value="16-20">16-20</option>
+              </select>
             </div>
             <div className="w-full">
               <label

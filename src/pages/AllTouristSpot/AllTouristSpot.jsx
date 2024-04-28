@@ -43,7 +43,7 @@ const AllTouristSpot = () => {
   };
 
   return (
-    <section className="container min-h-[calc(100vh-632px)]  mt-20">
+    <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div className="w-full ">
         <div className="mb-10">
           <h1 className="text-5xl font-rancho text-center mb-4 capitalize font-bold text-black/70">

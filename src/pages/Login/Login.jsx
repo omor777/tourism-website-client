@@ -51,7 +51,7 @@ const Login = () => {
   };
 
   return (
-    <section className="container min-h-[calc(100vh-632px)] mt-20">
+    <section className="container min-h-[calc(100vh-632px)] mt-40">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 border border-primary-extraLight  overflow-hidden">
           <div className="p-10 order-2 lg:order-1">

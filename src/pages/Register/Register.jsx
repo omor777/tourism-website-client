@@ -36,7 +36,7 @@ const Register = () => {
   };
 
   return (
-    <section className="container min-h-[calc(100vh-632px)] flex items-center justify-center mt-20">
+    <section className="container min-h-[calc(100vh-632px)] flex items-center justify-center mt-40">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 border border-primary-extraLight  overflow-hidden">
           <form className="p-10  " onSubmit={handleSubmit(handleRegister)}>
