@@ -118,9 +118,9 @@ const Login = () => {
               >
                 Register
               </Link>
-            </p>
+          </p>
           </div>
-          <div className="bg-loginBg bg-center bg-cover bg-no-repeat border-b lg:border-b-0 lg:border-l border-primary-light min-h-[630px] order-1 lg:order-2"></div>
+          <div className="bg-loginBg bg-center bg-cover bg-no-repeat border-b lg:border-b-0 lg:border-l border-primary-light min-h-[630px] order-1 lg:order-2 "></div>
         </div>
       </div>
     </section>

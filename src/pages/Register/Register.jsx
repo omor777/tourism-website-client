@@ -1,4 +1,3 @@
-import { DevTool } from "@hookform/devtools";
 import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -38,7 +37,7 @@ const Register = () => {
   return (
     <section className="container min-h-[calc(100vh-632px)] flex items-center justify-center mt-40">
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 border border-primary-extraLight  overflow-hidden">
+        <div className=" border border-primary-extraLight  overflow-hidden">
           <form className="p-10  " onSubmit={handleSubmit(handleRegister)}>
             <h1 className="text-4xl font-rancho text-center font-bold mb-8">
               Register Now
@@ -170,9 +169,7 @@ const Register = () => {
               </Link>
             </p>
           </form>
-          <div className="bg-formBg bg-center bg-cover bg-no-repeat border-l border-primary-light"></div>
         </div>
-        <DevTool control={control} />
       </div>
     </section>
   );

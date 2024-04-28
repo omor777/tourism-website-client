@@ -3,6 +3,7 @@ import Countries from "../../components/Countries/Countries";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import TouristSpots from "../../components/TouristSpots/TouristSpots";
 
+
 const Home = () => {
   return (
     <section className="container min-h-[calc(100vh-632px)]  mt-40">

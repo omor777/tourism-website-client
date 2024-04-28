@@ -15,7 +15,16 @@ const Countries = () => {
 
   return (
     <div className="container mt-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="">
+        <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+          Journey Through Diverse Destinations
+        </h1>
+        <p className="text-center max-w-2xl mx-auto mt-4">
+        Embark on a voyage of discovery as you uncover the richness of our planet&apos;s many nations. From the lush rainforests of Costa Rica to the snow-capped peaks of Nepal, each country holds its own treasures waiting to be explored.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {countries?.map((country) => {
           const { _id, image, country_name, description } = country;
           return (

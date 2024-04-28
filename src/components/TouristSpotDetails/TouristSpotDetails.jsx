@@ -33,7 +33,7 @@ const TouristSpotDetails = () => {
   } = touristSpot;
 
   return (
-    <section className="container min-h-[calc(100vh-632px)] mt-20">
+    <section className="container min-h-[calc(100vh-632px)] mt-40">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="border border-primary-extraLight lg:col-span-8 rounded overflow-hidden">
           <figure className="relative">

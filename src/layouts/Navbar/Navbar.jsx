@@ -1,3 +1,4 @@
+import { FaBars } from "react-icons/fa6";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import useAuth from "../../hooks/useAuth";
@@ -16,11 +17,8 @@ const Navbar = () => {
   return (
     <header className="py-5 bg-white">
       <nav className="container flex items-center justify-between">
-        <Link
-          to="/"
-          className="bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent font-bold text-3xl"
-        >
-          JourneyJo
+        <Link to="/" className="text-3xl font-bold">
+          Journey<span className="text-primary-main">Joy</span>
         </Link>
         <ul className="hidden lg:flex items-center gap-7">
           <li>
@@ -47,34 +45,30 @@ const Navbar = () => {
               AllTouristSpots
             </NavLink>
           </li>
-          {user && (
-            <>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-bold text-primary-main"
-                      : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
-                  }
-                  to="/addTouristSpot"
-                >
-                  AddTouristSpot
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-bold text-primary-main"
-                      : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
-                  }
-                  to="/myList"
-                >
-                  MyList
-                </NavLink>
-              </li>
-            </>
-          )}
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-primary-main"
+                  : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+              }
+              to="/addTouristSpot"
+            >
+              AddTouristSpot
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-primary-main"
+                  : "font-medium relative before:w-0 before:h-0.5 before:bg-primary-main before:absolute before:-bottom-1 before:rounded hover:before:w-full before:transition-all before:duration-300"
+              }
+              to="/myList"
+            >
+              MyList
+            </NavLink>
+          </li>
         </ul>
         <div className="hidden lg:block">
           {user ? (
@@ -114,6 +108,25 @@ const Navbar = () => {
               </Link>
             </div>
           )}
+        </div>
+        <div className="flex items-center gap-4 lg:hidden">
+          {user && (
+            <>
+              <img
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user?.displayName}
+                className="size-10 rounded-full border-4 cursor-pointer border-primary-main"
+                src={user?.photoURL}
+              />
+              <Tooltip
+                style={{ backgroundColor: "#3B82F6", fontWeight: 600 }}
+                id="my-tooltip"
+              />
+            </>
+          )}
+          <label htmlFor="my-drawer">
+            <FaBars className="text-2xl cursor-pointer" />
+          </label>
         </div>
       </nav>
     </header>

@@ -30,8 +30,18 @@ const CountryTouristSpot = () => {
 
   return (
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
-      <div className="w-full">
+      <div>
         <div>
+          <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+            Discover {country} Hidden Gems
+          </h1>
+          <p className="text-center max-w-2xl mx-auto mt-4">
+            Uncover the beauty and wonder of {country} with our curated
+            collection of country-specific tourist spot cards. From iconic
+            attractions to lesser-known treasures
+          </p>
+        </div>
+        <div className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {countryTouristSpots?.map((country) => (
               <CountryTouristSpotCard key={country._id} country={country} />

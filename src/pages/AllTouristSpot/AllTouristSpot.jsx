@@ -44,18 +44,18 @@ const AllTouristSpot = () => {
 
   return (
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
-      <div className="w-full ">
-        <div className="mb-10">
-          <h1 className="text-5xl font-rancho text-center mb-4 capitalize font-bold text-black/70">
-            All Tourist Spots
+      <div>
+        <div>
+          <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto bg-gradient-to-r from-blue-500 to-rose-500 bg-clip-text text-transparent">
+            Explore Our Tourist Spot Gallery
           </h1>
-          <p className="max-w-xl mx-auto text-center text-gray-600">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam
-            tempore quam aperiam quisquam. Eveniet voluptatibus doloribus
-            voluptatem corrupti vitae maiores.
+          <p className="text-center max-w-2xl mx-auto mt-4">
+            Dive into our tourist spot gallery and uncover a treasure trove of
+            mesmerizing destinations waiting to be explored. From iconic
+            landmarks to hidden gems off the beaten path.
           </p>
         </div>
-        <div>
+        <div className="mt-10">
           <div className="flex items-center justify-center">
             <select
               onChange={handleSortTouristSpots}
