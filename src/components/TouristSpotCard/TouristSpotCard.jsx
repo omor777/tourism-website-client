@@ -43,12 +43,12 @@ const TouristSpotCard = ({ spot }) => {
           </p>
         </div>
       </figure>
-      <div className="grid grid-rows-[1fr_auto] mt-10  p-5  h-[260px]">
+      <div className=" mt-12  flex flex-col justify-between min-h-[200px] p-4">
         {/* content */}
-        <div className="space-y-4">
+        <div className="space-y-4 grow">
           <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
 
-          <p>{short_description}</p>
+          <p className="text-justify">{short_description}</p>
         </div>
         <div className="flex items-center justify-between flex-wrap gap-y-3 ">
           <Link to={`/details/${_id}`}>

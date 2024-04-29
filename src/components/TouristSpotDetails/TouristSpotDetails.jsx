@@ -35,7 +35,7 @@ const TouristSpotDetails = () => {
   return (
     <section className="container min-h-[calc(100vh-632px)] mt-40">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <div className="border border-primary-extraLight lg:col-span-8 rounded overflow-hidden">
+        <div className="border border-primary-extraLight lg:col-span-7 rounded overflow-hidden">
           <figure className="relative">
             <img className="h-[480px] w-full object-cover" src={photo_url} />
             <span className="bg-primary-main text-white px-3 py-1.5 font-semibold absolute top-4 rounded left-4 capitalize">
@@ -107,7 +107,7 @@ const TouristSpotDetails = () => {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-4 border border-primary-extraLight rounded px-6 py-8 h-fit">
+        <div className="lg:col-span-5 border border-primary-extraLight rounded px-6 py-8 h-fit">
           <h1 className="text-4xl font-rancho text-center font-bold mb-8">
             Contact Us
           </h1>
