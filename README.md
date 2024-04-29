@@ -1,6 +1,6 @@
 # JourneyJoy
 
-Live Site: [https://tourism-website-client.vercel.app](https://real-state-9e79a.web.app/)
+Live Site: [https://tourism-website-client.vercel.app](https://tourism-website-client.vercel.app/)
 
 ## Features and Characteristics:
 
@@ -11,6 +11,4 @@ Live Site: [https://tourism-website-client.vercel.app](https://real-state-9e79a.
 - Easily book flights, hotels, tours, and activities directly on our website.
 - Interactive elements for enhanced user engagement
 
-## My Selected Category:
-
-- Southeast Asia
+## My Selected Category: Southeast Asia

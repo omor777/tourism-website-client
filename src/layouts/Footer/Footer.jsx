@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-gray-800 text-white/80">
-        <div className="container footer py-16 mt-24">
+        <div className="container footer py-16 mt-24 px-5 md:px-0">
           <aside>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-xl md:text-3xl font-bold">
               Journey<span className="text-primary-main">Joy</span>
             </h1>
             <p className="max-w-sm mt-2 leading-6">

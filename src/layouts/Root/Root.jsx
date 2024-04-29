@@ -46,7 +46,7 @@ const Root = () => {
         <ul className="menu w-80 min-h-full bg-base-200 text-base-content p-0  justify-between">
           {/* Sidebar content here */}
           <ul className="flex flex-col gap-6 items-center">
-            <li className="text-3xl font-bold mt-4">JourneyJoy</li>
+            <li className="text-xl md:text-3xl font-bold mt-4">JourneyJoy</li>
             <li className="mt-10">
               <NavLink
                 className={({ isActive }) =>

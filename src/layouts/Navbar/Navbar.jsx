@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <header className="py-5 bg-base-100">
       <nav className="container flex items-center justify-between">
-        <Link to="/" className="text-3xl font-bold">
+        <Link to="/" className="text-xl md:text-3xl font-bold">
           Journey<span className="text-primary-main">Joy</span>
         </Link>
         <ul className="hidden lg:flex items-center gap-7">

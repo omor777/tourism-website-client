@@ -15,7 +15,7 @@ const TouristSpots = () => {
 
   return (
     <div className="container">
-      <div className="">
+      <div>
         <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto ">
           Explore Spectacular Tourist Destinations
         </h1>

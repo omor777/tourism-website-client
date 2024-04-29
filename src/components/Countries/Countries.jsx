@@ -27,7 +27,7 @@ const Countries = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {countries?.map((country) => {
           const { _id, image, country_name, description } = country;
           return (

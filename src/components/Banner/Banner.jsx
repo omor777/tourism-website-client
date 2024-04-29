@@ -34,7 +34,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="bg-slider-1  bg-cover bg-center bg-no-repeat h-[500px] ">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full ">
-              <h1 className="text-[clamp(32px,5vw,55px)] font-bold text-center text-white">
+              <h1 className="text-[clamp(32px,5vw,55px)] font-bold font-rancho tracking-wide text-center text-white ">
                 Adventure and Activities
               </h1>
               <p className=" max-w-2xl mx-auto text-center  text-white mt-3">
@@ -48,7 +48,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="bg-slider-2  bg-cover bg-center bg-no-repeat h-[500px] ">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full ">
-              <h1 className="text-[clamp(32px,5vw,55px)] font-bold text-center  text-white">
+              <h1 className="text-[clamp(32px,5vw,55px)] font-bold font-rancho tracking-wide text-center  text-white">
                 Destination Highlights
               </h1>
               <p className="text-white max-w-2xl mx-auto text-center mt-3">
@@ -62,7 +62,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="bg-slider-3  bg-cover bg-center bg-no-repeat h-[500px] ">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-full ">
-              <h1 className="text-[clamp(32px,5vw,55px)] font-bold text-center text-white">
+              <h1 className="text-[clamp(32px,5vw,55px)] font-bold font-rancho tracking-wide text-center text-white">
                 Relaxation and Luxury
               </h1>
               <p className="text-white max-w-2xl mx-auto text-center mt-3">
