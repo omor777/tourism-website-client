@@ -34,6 +34,8 @@ const AddTouristSpot = () => {
       photo_url,
     } = data;
 
+    const avg_cost = Number(average_cost);
+
     const newTouristSpot = {
       username,
       email,
@@ -41,7 +43,7 @@ const AddTouristSpot = () => {
       country_name,
       location,
       short_description,
-      average_cost,
+      avg_cost,
       seasonality,
       travel_time,
       total_visitors_per_year,
@@ -67,7 +69,7 @@ const AddTouristSpot = () => {
             icon: "success",
           });
           // // resent form
-          // formRef.current.reset()
+          formRef.current.reset();
         }
       })
       .catch((err) => console.error(err));
@@ -81,14 +83,14 @@ const AddTouristSpot = () => {
           onSubmit={handleSubmit(handleAddTouristSpot)}
           className="border border-blue-200 p-8 lg:py-12 lg:px-16 rounded space-y-6"
         >
-          <h1 className="text-5xl font-rancho text-center font-bold mb-12">
+          <h1 className="text-[clamp(25px,5vw,50px)] font-rancho text-center font-bold mb-12 tracking-wide">
             Add Tourist Spot
           </h1>
           {/* row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="name"
               >
                 username
@@ -104,7 +106,7 @@ const AddTouristSpot = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="email"
               >
                 email
@@ -124,7 +126,7 @@ const AddTouristSpot = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="tourist_spot_name"
               >
                 tourist spot name
@@ -139,7 +141,7 @@ const AddTouristSpot = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="country_name"
               >
                 country name
@@ -163,7 +165,7 @@ const AddTouristSpot = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="location"
               >
                 location
@@ -178,7 +180,7 @@ const AddTouristSpot = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="short_description"
               >
                 short description
@@ -196,7 +198,7 @@ const AddTouristSpot = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="average_cost"
               >
                 average cost
@@ -204,14 +206,14 @@ const AddTouristSpot = () => {
               <input
                 className="appearance-none block w-full bg-blue-50 text-gray-700 border border-blue-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary-main placeholder:capitalize"
                 id="average_cost"
-                type="text"
+                type="number"
                 placeholder="average cost"
                 {...register("average_cost")}
               />
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="seasonality"
               >
                 seasonality
@@ -232,7 +234,7 @@ const AddTouristSpot = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="travel_time"
               >
                 travel time
@@ -252,7 +254,7 @@ const AddTouristSpot = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="total_visitors_per_year"
               >
                 total visitors per year
@@ -270,7 +272,7 @@ const AddTouristSpot = () => {
           <div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="photo_url"
               >
                 photo url

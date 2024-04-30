@@ -9,6 +9,6 @@ Live Site: [https://tourism-website-client.vercel.app](https://tourism-website-c
 - Responsive design for seamless experience across devices
 - Secure user authentication and authorization system
 - Easily book flights, hotels, tours, and activities directly on our website.
-- Interactive elements for enhanced user engagement
+
 
 ## My Selected Category: Southeast Asia

@@ -37,19 +37,19 @@ const TouristSpotDetails = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="border border-primary-extraLight lg:col-span-7 rounded overflow-hidden">
           <figure className="relative">
-            <img className="h-[480px] w-full object-cover" src={photo_url} />
+            <img className="md:h-[480px] w-full object-cover" src={photo_url} />
             <span className="bg-primary-main text-white px-3 py-1.5 font-semibold absolute top-4 rounded left-4 capitalize">
               {country_name}
             </span>
           </figure>
           <div className="p-6">
             <div>
-              <div className="flex items-center justify-between">
-                <h1 className="text-4xl font-bold capitalize text-black/70">
+              <div className="flex  flex-col gap-3">
+                <h1 className="text-[clamp(26px,4vw,36px)] font-bold capitalize ">
                   {tourist_spot_name}
                 </h1>
                 <h2 className="flex items-center">
-                  <FaDollarSign className="text-2xl text-primary-main" />
+                  <FaDollarSign className="text-lg md:text-2xl text-primary-main" />
                   <span className="text-3xl font-bold text-primary-main">
                     {average_cost}
                   </span>
@@ -58,10 +58,10 @@ const TouristSpotDetails = () => {
               </div>
 
               <p className="flex items-center gap-3 mt-5">
-                <span className="text-primary-main p-3 bg-blue-100 rounded-full">
+                <span className="text-primary-main p-1.5 md:p-3 bg-blue-100 rounded-full">
                   <FaLocationDot className="text-xl" />
                 </span>
-                <span className="text-lg font-medium text-black/60 capitalize">
+                <span className="text-lg font-medium  capitalize">
                   {location}
                 </span>
               </p>
@@ -115,7 +115,7 @@ const TouristSpotDetails = () => {
             {/* row */}
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="name"
               >
                 Name
@@ -130,7 +130,7 @@ const TouristSpotDetails = () => {
             {/* row */}
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="email"
               >
                 Email
@@ -146,7 +146,7 @@ const TouristSpotDetails = () => {
             {/* row */}
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="phone"
               >
                 Phone
@@ -162,7 +162,7 @@ const TouristSpotDetails = () => {
             {/* row */}
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="message"
               >
                 message

@@ -11,7 +11,6 @@ const Login = () => {
 
   const navigator = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   const handleLogin = (data) => {
     const { email, password } = data;
@@ -19,7 +18,7 @@ const Login = () => {
     loginUser(email, password)
       .then(() => {
         Swal.fire({
-          title: "Login successful 😀",
+          title: "Login Successful",
           icon: "success",
         });
 
@@ -37,7 +36,12 @@ const Login = () => {
 
   const handleGoogleLogin = (params) => {
     googleLogin()
-      .then((result) => {
+      .then(() => {
+        Swal.fire({
+          title: "Login Successful",
+          icon: "success",
+        });
+
         navigator(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
@@ -46,6 +50,11 @@ const Login = () => {
   const handleGithubLogin = () => {
     githubLogin()
       .then(() => {
+        Swal.fire({
+          title: "Login Successful",
+          icon: "success",
+        });
+
         navigator(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));

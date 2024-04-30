@@ -10,7 +10,8 @@ const TouristSpots = () => {
       .then((res) => res.json())
       .then((data) => {
         setTouristSpots(data);
-      });
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   return (

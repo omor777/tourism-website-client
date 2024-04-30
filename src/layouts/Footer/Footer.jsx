@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="divider divider-neutral"></div>
         <div>
-          <p className="text-center pb-8 pt-2">
+          <p className="text-center pb-8 pt-2 px-5 md:px-0">
             Copyright © 2024 JourneyJoy. All rights reserved.
           </p>
         </div>

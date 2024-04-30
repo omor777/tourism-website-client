@@ -1,6 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
@@ -14,19 +15,24 @@ const Register = () => {
     formState: { errors },
   } = form;
 
+  const navigator = useNavigate();
+
   const handleRegister = (data) => {
     const { name, email, password, photoUrl } = data;
 
     createUser(email, password)
       .then((result) => {
+        Swal.fire({
+          title: "Registration Successful",
+          icon: "success",
+        });
+        navigator("/");
         // update user
         updateProfile(result.user, {
           displayName: name,
           photoURL: photoUrl,
         })
-          .then(() => {
-            console.log("profile is updated");
-          })
+          .then(() => {})
           .catch((error) => {
             console.error(error);
           });

@@ -20,7 +20,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
 
-  const handleTheme = (e) => {
+  const handleTheme = () => {
     const theme = getThemeFromLs();
     if (theme === "light") {
       setThemeToLs("dark");
@@ -106,7 +106,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-5 ">
           {/* theme control */}
-          <div className="-mb-1">
+          <div className="-mb-2">
             <button onClick={handleTheme}>
               {theme === "light" ? (
                 <FaMoon className="text-3xl" />

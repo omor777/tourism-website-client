@@ -42,7 +42,7 @@ const CountryTouristSpot = () => {
           </p>
         </div>
         <div className="mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 ">
+          <div className={`grid grid-cols-1 md:grid-cols-2  gap-6`}>
             {countryTouristSpots?.map((country) => (
               <CountryTouristSpotCard key={country._id} country={country} />
             ))}

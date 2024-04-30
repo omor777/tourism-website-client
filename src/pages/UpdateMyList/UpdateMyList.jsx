@@ -25,7 +25,7 @@ const UpdateMyList = () => {
     const country_name = form.country_name.value;
     const location = form.location.value;
     const short_description = form.short_description.value;
-    const average_cost = parseInt(form.average_cost.value);
+    const average_cost = Number(form.average_cost.value);
     const seasonality = form.seasonality.value;
     const travel_time = form.travel_time.value;
     const total_visitors_per_year = form.total_visitors_per_year.value;
@@ -59,17 +59,18 @@ const UpdateMyList = () => {
             icon: "success",
           });
         }
-      });
+      })
+      .catch((err) => console.error(err));
   };
 
   return (
-    <section className="container min-h-[calc(100vh-632px)] mt-20">
+    <section className="container min-h-[calc(100vh-632px)] mt-40">
       <div className="w-full">
         <form
           onSubmit={handleUpdateTouristSpot}
           className="border border-blue-200 p-8 lg:py-12 lg:px-16 rounded space-y-6"
         >
-          <h1 className="text-5xl font-rancho text-center font-bold mb-12 ">
+          <h1 className="text-[clamp(25px,5vw,50px)] font-rancho text-center font-bold mb-12 tracking-wide">
             Update Tourist Spot
           </h1>
 
@@ -77,7 +78,7 @@ const UpdateMyList = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="tourist_spot_name"
               >
                 tourist spot name
@@ -93,7 +94,7 @@ const UpdateMyList = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="country_name"
               >
                 country name
@@ -117,7 +118,7 @@ const UpdateMyList = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="location"
               >
                 location
@@ -133,7 +134,7 @@ const UpdateMyList = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="short_description"
               >
                 short description
@@ -152,7 +153,7 @@ const UpdateMyList = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="average_cost"
               >
                 average cost
@@ -168,7 +169,7 @@ const UpdateMyList = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="seasonality"
               >
                 seasonality
@@ -189,7 +190,7 @@ const UpdateMyList = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="travel_time"
               >
                 travel time
@@ -209,7 +210,7 @@ const UpdateMyList = () => {
             </div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="total_visitors_per_year"
               >
                 total visitors per year
@@ -228,7 +229,7 @@ const UpdateMyList = () => {
           <div>
             <div className="w-full">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide  text-xs font-bold mb-2"
                 htmlFor="photo_url"
               >
                 photo url

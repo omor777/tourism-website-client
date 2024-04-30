@@ -3,19 +3,20 @@ import TouristSpotCard from "../../components/TouristSpotCard/TouristSpotCard";
 import API_URL from "../../utils/api";
 
 const AllTouristSpot = () => {
-  const { url, setUrl } = useState(`${API_URL}/tourist_spots`);
+  const [loading, setLoading] = useState(true);
   const [allTouristSpots, setAllTouristSpots] = useState([]);
 
   useEffect(() => {
     fetch(`${API_URL}/tourist_spots`)
       .then((res) => res.json())
       .then((data) => {
+        setLoading(false);
         setAllTouristSpots(data);
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [url]);
+  }, []);
 
   // console.log(allTouristSpots);
   const handleSortTouristSpots = (e) => {
@@ -25,6 +26,7 @@ const AllTouristSpot = () => {
       fetch(`${API_URL}/sorted_tourist_spots`)
         .then((res) => res.json())
         .then((data) => {
+          setLoading(false);
           setAllTouristSpots(data);
         })
         .catch((err) => {
@@ -34,6 +36,7 @@ const AllTouristSpot = () => {
       fetch(`${API_URL}/tourist_spots`)
         .then((res) => res.json())
         .then((data) => {
+          setLoading(false);
           setAllTouristSpots(data);
         })
         .catch((err) => {
@@ -42,14 +45,22 @@ const AllTouristSpot = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
+
   return (
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div>
         <div>
-          <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
+          <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
             Explore Our Tourist Spot Gallery
           </h1>
-          <p className="text-center max-w-2xl mx-auto mt-4">
+          <p className="text-center max-w-2xl mx-auto mt-4 text-sm md:text-base">
             Dive into our tourist spot gallery and uncover a treasure trove of
             mesmerizing destinations waiting to be explored. From iconic
             landmarks to hidden gems off the beaten path.
