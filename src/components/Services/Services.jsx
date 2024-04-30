@@ -2,18 +2,24 @@ import { FaBuilding, FaGlobe } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
 
+import { Slide } from "react-awesome-reveal";
+
 const Services = () => {
   return (
     <section className="mt-24">
       <div>
-        <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto tracking-wide">
-          Our Services
-        </h1>
-        <p className="text-center max-w-2xl mx-auto mt-4">
-          Explore our comprehensive range of travel services, including
-          accommodation, transportation, and guided tours, all meticulously
-          curated to ensure an unforgettable adventure.
-        </p>
+        <Slide direction="left" duration={1200}>
+          <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto tracking-wide">
+            Our Services
+          </h1>
+        </Slide>
+        <Slide direction="right" duration={1200}>
+          <p className="text-center max-w-2xl mx-auto mt-4">
+            Explore our comprehensive range of travel services, including
+            accommodation, transportation, and guided tours, all meticulously
+            curated to ensure an unforgettable adventure.
+          </p>
+        </Slide>
       </div>
       {/* container */}
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -23,7 +29,7 @@ const Services = () => {
             WorldWide Tours
           </h1>
           <p className="mt-2  group-hover:text-white duration-[400ms]">
-            Explore global  with our curated worldwide tour experiences.
+            Explore global with our curated worldwide tour experiences.
           </p>
         </div>
         <div className="shadow-card p-5 group transition-colors duration-[400ms] hover:bg-primary-main cursor-pointer">
@@ -50,8 +56,7 @@ const Services = () => {
             Event Management
           </h1>
           <p className="mt-2  group-hover:text-white duration-[400ms]">
-            Elevate your events with our  event management
-            solutions.
+            Elevate your events with our event management solutions.
           </p>
         </div>
       </div>

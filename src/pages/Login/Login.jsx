@@ -73,7 +73,7 @@ const Login = () => {
                 {/* row */}
                 <div className="w-full">
                   <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    className="block uppercase tracking-wide text-xs font-bold mb-2"
                     htmlFor="email"
                   >
                     Email
@@ -90,7 +90,7 @@ const Login = () => {
                 {/* row */}
                 <div className="w-full">
                   <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    className="block uppercase tracking-wide text-xs font-bold mb-2"
                     htmlFor="password"
                   >
                     Password

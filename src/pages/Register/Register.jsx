@@ -52,7 +52,7 @@ const Register = () => {
               {/* row */}
               <div className="w-full">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-xs font-bold mb-2"
                   htmlFor="name"
                 >
                   Name
@@ -76,7 +76,7 @@ const Register = () => {
               {/* row */}
               <div className="w-full">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-xs font-bold mb-2"
                   htmlFor="email"
                 >
                   Email
@@ -100,7 +100,7 @@ const Register = () => {
               {/* row */}
               <div className="w-full">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-xs font-bold mb-2"
                   htmlFor="photoUrl"
                 >
                   Photo Url
@@ -124,7 +124,7 @@ const Register = () => {
               {/* row */}
               <div className="w-full">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-xs font-bold mb-2"
                   htmlFor="password"
                 >
                   Password

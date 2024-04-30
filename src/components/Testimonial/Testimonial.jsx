@@ -1,14 +1,20 @@
+import { Slide } from "react-awesome-reveal";
+
 const Testimonial = () => {
   return (
     <section className="container  mt-24">
-      <div className="">
-        <h1 className="text-5xl font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
-          What Our Visitors Say
-        </h1>
-        <p className="text-center max-w-2xl mx-auto mt-4">
-          Discover what fellow travelers have to say about their experiences
-          with us. From memorable adventures to seamless bookings
-        </p>
+      <div>
+        <Slide direction="left" duration={1200}>
+          <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
+            What Our Visitors Say
+          </h1>
+        </Slide>
+        <Slide direction="right" duration={1200}>
+          <p className="text-center max-w-2xl mx-auto mt-4">
+            Discover what fellow travelers have to say about their experiences
+            with us. From memorable adventures to seamless bookings
+          </p>
+        </Slide>
       </div>
       {/* container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8">

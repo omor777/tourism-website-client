@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import API_URL from "../../utils/api";
 
@@ -16,15 +17,19 @@ const Countries = () => {
   return (
     <div className="container mt-24">
       <div className="">
-        <h1 className="text-[clamp(28px,5vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
-          Journey Through Diverse Destinations
-        </h1>
-        <p className="text-center max-w-2xl mx-auto mt-4">
-          Embark on a voyage of discovery as you uncover the richness of our
-          planet&apos;s many nations. From the lush rainforests of Costa Rica to
-          the snow-capped peaks of Nepal, each country holds its own treasures
-          waiting to be explored.
-        </p>
+        <Slide className="left" duration={1200}>
+          <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
+            Journey Through Diverse Destinations
+          </h1>
+        </Slide>
+        <Slide direction="right" duration={1200}>
+          <p className="text-center max-w-2xl mx-auto mt-4">
+            Embark on a voyage of discovery as you uncover the richness of our
+            planet&apos;s many nations. From the lush rainforests of Costa Rica
+            to the snow-capped peaks of Nepal, each country holds its own
+            treasures waiting to be explored.
+          </p>
+        </Slide>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
