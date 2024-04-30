@@ -18,41 +18,34 @@ const CountryTouristSpotCard = ({ country }) => {
     travel_time,
   } = country;
   return (
-    <div className=" gap-5 border shadow-card ">
-      <figure className="relative">
+    <div className="card card-compact rounded-none border  shadow-card">
+      <figure className="relative ">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
-        <div className="bg-base-100 shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded">
+        <div className="bg-base-100 py-2 px-4  rounded absolute bottom-3 w-11/12 flex items-center justify-between shadow-card">
           <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaClock className="text-lg text-primary-main" />
             {travel_time} days
           </p>
           <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
-            {seasonality === "sumer" ? (
+            {seasonality === "Summer" ? (
               <IoIosUmbrella className="text-lg text-primary-main" />
-            ) : (
+            ) : seasonality === "Winter" ? (
               <GiWinterHat className="text-lg text-primary-main" />
+            ) : (
+              ""
             )}
             {seasonality}
           </p>
           <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaPeopleGroup className="text-lg text-primary-main" />
-            {total_visitors_per_year} m
+            {total_visitors_per_year} M
           </p>
         </div>
       </figure>
-      <div className="grid grid-rows-[1fr_auto] mt-10  p-5  h-[260px]">
-        {/* content */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold capitalize">
-              {tourist_spot_name}
-            </h1>
-            <p className="text-sm font-bold tracking-wide border border-primary-main py-0.5 px-1.5 rounded-full bg-blue-50 text-primary-main">
-              {country_name}
-            </p>
-          </div>
-
-          <p className="text-gray-500">{short_description}</p>
+      <div className="card-body  mt-4">
+        <div className="space-y-4 grow">
+          <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
+          <p className="text-justify">{short_description}</p>
         </div>
         <div className="flex items-center justify-between flex-wrap gap-y-3 ">
           <Link to={`/details/${_id}`}>
@@ -61,10 +54,10 @@ const CountryTouristSpotCard = ({ country }) => {
             </button>
           </Link>
           <div>
-            <h1 className="flex flex-wrap items-center text-base-content">
+            <h1 className="flex flex-wrap items-center">
               <FaDollarSign className="text-xl" />{" "}
               <span className="text-2xl font-bold">{average_cost}</span>
-              <span className="text-sm font-medium ml-0.5">/ Average</span>
+              <span className="text-sm font-medium ml-0.5 ">/ Average</span>
             </h1>
           </div>
         </div>

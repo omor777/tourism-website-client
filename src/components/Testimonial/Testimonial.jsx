@@ -4,12 +4,12 @@ const Testimonial = () => {
   return (
     <section className="container  mt-24">
       <div>
-        <Slide direction="left" duration={1200}>
+        <Slide direction="down" duration={1300}>
           <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
             What Our Visitors Say
           </h1>
         </Slide>
-        <Slide direction="right" duration={1200}>
+        <Slide direction="up" duration={1300}>
           <p className="text-center max-w-2xl mx-auto mt-4">
             Discover what fellow travelers have to say about their experiences
             with us. From memorable adventures to seamless bookings
@@ -46,7 +46,7 @@ const Testimonial = () => {
           </div>
           <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-default-600 ">
             <img
-              src="https://source.unsplash.com/50x50/?portrait?1"
+              src="https://i.postimg.cc/8c85W5TY/photo-1513956589380-bad6acb9b9d4.jpg"
               alt=""
               className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500"
             />
@@ -56,12 +56,7 @@ const Testimonial = () => {
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
-              <input
-                type="radio"
-                name="rating-1"
-                className="mask mask-star"
-                defaultChecked
-              />
+              <input type="radio" name="rating-1" className="mask mask-star" />
             </div>
           </div>
         </div>
@@ -92,7 +87,7 @@ const Testimonial = () => {
           </div>
           <div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-default-600 ">
             <img
-              src="https://source.unsplash.com/50x50/?portrait?2"
+              src="https://i.postimg.cc/9F86Nk7m/photo-1515027037286-7da2d06130cf.jpg"
               alt=""
               className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
             />
@@ -133,7 +128,7 @@ const Testimonial = () => {
           </div>
           <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
             <img
-              src="https://source.unsplash.com/50x50/?portrait?3"
+              src="https://i.postimg.cc/sgBgn71L/photo-1517202383675-eb0a6e27775f.jpg"
               alt=""
               className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500"
             />

@@ -11,7 +11,6 @@ const Register = () => {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = form;
 

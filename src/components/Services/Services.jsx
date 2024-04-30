@@ -8,12 +8,12 @@ const Services = () => {
   return (
     <section className="mt-24">
       <div>
-        <Slide direction="left" duration={1200}>
+        <Slide direction="down" duration={1300} >
           <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto tracking-wide">
             Our Services
           </h1>
         </Slide>
-        <Slide direction="right" duration={1200}>
+        <Slide direction="up" duration={1300} >
           <p className="text-center max-w-2xl mx-auto mt-4">
             Explore our comprehensive range of travel services, including
             accommodation, transportation, and guided tours, all meticulously

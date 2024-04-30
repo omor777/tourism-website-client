@@ -19,10 +19,10 @@ const TouristSpotCard = ({ spot }) => {
   } = spot;
 
   return (
-    <div className=" gap-5 border shadow-card ">
-      <figure className="relative">
+    <div className="card card-compact rounded-none border  shadow-card">
+      <figure className="relative ">
         <img className="object-cover h-[250px] w-full" src={photo_url} />
-        <div className="shadow-md py-3.5 px-4 flex items-center justify-between w-10/12 mx-auto absolute left-[8.5%] -bottom-[9%] rounded bg-base-100">
+        <div className="bg-base-100 py-2 px-4  rounded absolute bottom-3 w-11/12 flex items-center justify-between shadow-card">
           <p className="text-sm font-semibold capitalize flex items-center gap-1.5">
             <FaClock className="text-lg text-primary-main" />
             {travel_time} days
@@ -43,11 +43,9 @@ const TouristSpotCard = ({ spot }) => {
           </p>
         </div>
       </figure>
-      <div className=" mt-12  flex flex-col justify-between min-h-[200px] p-4">
-        {/* content */}
+      <div className="card-body  mt-4">
         <div className="space-y-4 grow">
           <h1 className="text-2xl font-bold capitalize">{tourist_spot_name}</h1>
-
           <p className="text-justify">{short_description}</p>
         </div>
         <div className="flex items-center justify-between flex-wrap gap-y-3 ">

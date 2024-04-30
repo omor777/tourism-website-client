@@ -34,7 +34,7 @@ const Login = () => {
       });
   };
 
-  const handleGoogleLogin = (params) => {
+  const handleGoogleLogin = () => {
     googleLogin()
       .then(() => {
         Swal.fire({

@@ -58,12 +58,12 @@ const AllTouristSpot = () => {
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div>
         <div>
-          <Slide direction="left" duration={1200}>
+          <Slide direction="down" duration={1300}>
             <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto">
               Explore Our Tourist Spot Gallery
             </h1>
           </Slide>
-          <Slide direction="right" duration={1200}>
+          <Slide direction="up" duration={1300}>
             <p className="text-center max-w-2xl mx-auto mt-4 text-sm md:text-base">
               Dive into our tourist spot gallery and uncover a treasure trove of
               mesmerizing destinations waiting to be explored. From iconic
