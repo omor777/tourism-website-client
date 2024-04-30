@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import API_URL from "../../utils/api";
 
 const Countries = () => {
+  const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
     fetch(`${API_URL}/countries`)
       .then((res) => res.json())
       .then((data) => {
+        setLoading(false);
         setCountries(data);
       })
       .catch((err) => console.error(err));
@@ -33,27 +35,33 @@ const Countries = () => {
         </Slide>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-        {countries?.map((country) => {
-          const { _id, image, country_name, description } = country;
-          return (
-            <Link key={_id} to={`/touristSpots/${country_name}`}>
-              <div className=" p-4 rounded-md shadow-card flex flex-col justify-between h-[470px] border">
-                <img
-                  src={image}
-                  className="object-cover object-center w-full rounded-md h-60 bg-gray-500"
-                />
-                <div className="mt-6 mb-2">
-                  <h2 className="text-2xl font-semibold tracking-wide">
-                    {country_name}
-                  </h2>
+      {loading ? (
+        <div className="grid place-items-center mt-32">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          {countries?.map((country) => {
+            const { _id, image, country_name, description } = country;
+            return (
+              <Link key={_id} to={`/touristSpots/${country_name}`}>
+                <div className=" p-4 rounded-md shadow-card flex flex-col justify-between h-[470px] border">
+                  <img
+                    src={image}
+                    className="object-cover object-center w-full rounded-md h-60 bg-gray-500"
+                  />
+                  <div className="mt-6 mb-2">
+                    <h2 className="text-2xl font-semibold tracking-wide">
+                      {country_name}
+                    </h2>
+                  </div>
+                  <p>{description}</p>
                 </div>
-                <p>{description}</p>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

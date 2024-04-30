@@ -17,14 +17,6 @@ const TouristSpots = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center mt-20">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
-    );
-  }
-
   return (
     <div className="container">
       <div>
@@ -41,11 +33,17 @@ const TouristSpots = () => {
           </p>
         </Slide>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
-        {touristSpots.slice(0, 6).map((spot) => (
-          <TouristSpotCard key={spot._id} spot={spot} />
-        ))}
-      </div>
+      {loading ? (
+        <div className="grid place-items-center mt-32">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+          {touristSpots.slice(0, 6).map((spot) => (
+            <TouristSpotCard key={spot._id} spot={spot} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

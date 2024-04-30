@@ -21,24 +21,16 @@ const CountryTouristSpot = () => {
       });
   }, [country]);
 
-  if (loading) {
-    return (
-      <div className="grid place-items-center min-h-screen">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
-    );
-  }
-
   return (
     <section className="container min-h-[calc(100vh-632px)]  mt-40">
       <div>
         <div>
-          <Slide direction="down" duration={1300}>
+          <Slide direction="down" duration={1000}>
             <h1 className="text-[clamp(28px,6vw,50px)] font-bold font-rancho leading-none text-center max-w-[500px] mx-auto text-base-content">
               Discover {country} Hidden Gems
             </h1>
           </Slide>
-          <Slide direction="up" duration={1300}>
+          <Slide direction="up" duration={1000}>
             <p className="text-center max-w-2xl mx-auto mt-4">
               Uncover the beauty and wonder of {country} with our curated
               collection of country-specific tourist spot cards. From iconic
@@ -46,17 +38,23 @@ const CountryTouristSpot = () => {
             </p>
           </Slide>
         </div>
-        <div className="mt-10">
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 ${
-              countryTouristSpots.length > 2 ? "lg:grid-cols-3" : ""
-            } gap-6`}
-          >
-            {countryTouristSpots?.map((country) => (
-              <CountryTouristSpotCard key={country._id} country={country} />
-            ))}
+        {loading ? (
+          <div className="grid place-items-center mt-32">
+            <span className="loading loading-spinner loading-lg"></span>
           </div>
-        </div>
+        ) : (
+          <div className="mt-10">
+            <div
+              className={`grid grid-cols-1 md:grid-cols-2 ${
+                countryTouristSpots.length > 2 ? "lg:grid-cols-3" : ""
+              } gap-6`}
+            >
+              {countryTouristSpots?.map((country) => (
+                <CountryTouristSpotCard key={country._id} country={country} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
